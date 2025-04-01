@@ -1,0 +1,192 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', Arial, sans-serif; /* সুন্দর ও আধুনিক ফন্ট */
+  line-height: 1.8;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* সফট গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+  color: #222; /* একটু গাঢ় কালো যাতে সহজে পড়া যায় */
+}
+.container {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* সুন্দর ছায়া */
+  max-width: 1100px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+header .logo {
+  max-width: 90px; /* লোগোর সাইজ বড় করা হলো */
+  height: auto; /* অনুপাত ঠিক রাখার জন্য */
+  display: block; /* ব্লক এলিমেন্ট */
+  margin: 5px 0; /* উপরে ও নিচে মার্জিন */
+  border-radius: 10px; /* কোণাগুলো গোলাকার করা */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* সুন্দর ছায়া যোগ করা */
+  transition: transform 0.3s ease-in-out; /* হোভার ইফেক্টের জন্য */
+}
+
+header .logo:hover {
+  transform: scale(1.1); /* হোভার করলে লোগো একটু বড় হবে */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin: 0 10px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 30px 0;
+}
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.cta-button {
+  background: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #218838;
+}
+
+/* Benefits Section */
+.benefits, .testimonials, .signup, .jobs {
+  background: #fff;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.benefits h2, .testimonials h2, .signup h2, .jobs h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.benefits ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.benefits li {
+  flex: 1 1 250px;
+  margin: 10px;
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+}
+
+/* Job Posts Section */
+.jobs .job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.jobs .job-post {
+  background: #e9ecef;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  flex: 1 1 300px;
+  text-align: center;
+}
+.jobs .job-post h3 {
+  margin-bottom: 10px;
+}
+.jobs .job-post p {
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+  margin: 20px;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  background: #f9f9f9;
+}
+.testimonials blockquote p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.testimonials blockquote footer {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Signup Form */
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.signup button {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+	background: #222; /* ডার্ক ব্যাকগ্রাউন্ড */
+    color: #fff; /* সাদা টেক্সট */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+footer strong {
+    color: #FFD700; /* গোল্ডেন কালার */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits ul,
+  .jobs .job-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefits li,
+  .jobs .job-post {
+    width: 80%;
+  }
+}
